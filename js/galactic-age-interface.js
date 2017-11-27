@@ -1,28 +1,25 @@
-import { Haiku } from './../js/haiku.js';
+import { GalacticAge } from './../js/galactic-age.js';
 
 $(function(){
 $(".formOne").submit(function(event){
   event.preventDefault();
 
-  var userInput = $("#input").val().toUpperCase();
-  let match;
-  const lineCheck = userInput.match(/\r|\n/g);
-  if (lineCheck === null)
-  {
-    match = 0;
-  } else {
-    match = lineCheck.length;
-  }
+    let dob = new Date($("#dob").val());
+    let calculate = new GalacticAge(dob);
 
-  if(match === 2){
+    $("#output").show();
 
-    var haikuChecker = new Haiku();
-    var output=haikuChecker.checkHaiku(userInput);
-    $("#output").text("It is a Haiku!!!");
-    }
-  else {
-    alert("Not a Haiku");
-  };
+    $('#ageseconds').text(calculate.ageToSeconds());
+
+    $('#mercury').text(calculate.ageOnMercury());
+    $('#venus').text(calculate.ageOnVenus());
+    $('#mars').text(calculate.ageOnMars());
+    $('#jupiter').text(calculate.ageOnJupiter());
+
+    $('#mercuryexp').text(calculate.expectancyOnMercury());
+    $('#venusexp').text(calculate.expectancyOnVenus());
+    $('#marsexp').text(calculate.expectancyOnMars());
+    $('#jupiterexp').text(calculate.expectancyOnJupiter());
 
 });
 });
