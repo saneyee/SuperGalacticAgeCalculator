@@ -12,15 +12,31 @@
 
       <form class="formOne">
         <div class="form-group">
-          <h2>Write a Poem</h2>
-          <textarea id ="input" rows="15" cols="80"></textarea>
+          <h2>Want to know your age on diferent Planets?</h2>
+          <label for="dob">Enter your Date of Birth:</label>
+        <input id="dob" class="form-control" type="date"  required>
         </div>
-        <button type="submit" class="btn btn-danger">Checkout!</button>
+        <button type="submit" class="btn btn-danger">Calculate!</button>
         <br>
         <br>
       </form>
-
-      <h2 id="output"></h2>
+      <div id="output">
+          <h3>You are <span id= "age-in-seconds"></span> seconds old</h3>
+     <hr>
+      <div class="row">
+          <div class="col-md-6">
+              <h3>Age on Mercury : <span id= "mercury"></span> years. </h3>
+              <h3>Age on Venus : <span id= "venus"></span> years.</h3>
+              <h3>Age on Mars : <span id= "mars"></span> years.</h3>
+              <h3>Age on Jupiter : <span id= "jupiter"></span> years.</h3>
+          </div>
+          <div class="col-md-6">
+              <h3>LifeExpectancy on Mercury : <span id= "mercuryexp"></span> years. </h3>
+              <h3>LifeExpectancy on Venus : <span id= "venusexp"></span> years.</h3>
+              <h3>LifeExpectancy on Mars : <span id= "marsexp"></span> years.</h3>
+              <h3>LifeExpectancy on Jupiter : <span id= "jupiterexp"></span> years.</h3>
+          </div>
+      </div>
     </div>
   </body>
 </html>
