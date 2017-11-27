@@ -1,4 +1,4 @@
-import { GalacticAge } from './../js/galactic-age.js';
+import {GalacticAge} from './../js/galactic-age.js';
 
 $(document).ready(function () {
 $(".formOne").submit(function(event){
