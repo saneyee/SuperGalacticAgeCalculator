@@ -18,6 +18,7 @@ $(".formOne").submit(function(event){
     $('#mars').text(calculate.ageOnMars());
     $('#jupiter').text(calculate.ageOnJupiter());
 
+    $('#earthexp').text(calculate.lifeExpectancyOnEarth());
     $('#mercuryexp').text(calculate.lifeExpectancyOnMercury());
     $('#venusexp').text(calculate.lifeExpectancyOnVenus());
     $('#marsexp').text(calculate.lifeExpectancyOnMars());
