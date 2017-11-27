@@ -1,34 +1,74 @@
-export class Haiku {
-  constructor() {
+export class GalacticAge {
+  constructor(dob) {
+      this.dob = dob;
+      this.lifeExpectancy = 78;
 }
 
-//method
-var splitArray=user.split(" ");
+//ages on different planets
+ageOnEarth() {
+    const birthdate = new Date(dob);
+    let today = new Date();
+    let diff = today-birthdate;
+    let age = Math.floor(diff/(1000*60*60*24*365.25));
+    return age;
+}
 
-  var vowelArray = ["a","e","i","o","u"];
-let letters = [];
-let pushWord =[];
+ageToSeconds() {
+    let agetosec = parseInt(this.ageOnEarth()*60*
+    60*24*365);
+    return agetosec;
+}
 
-splitArray.forEach(function(word) {
+ageOnMercury() {
 
-    var splitWord = word.split("");
+  let mercuryAge = parseInt(this.ageOnEarth()/0.24);
+  return mercuryAge;
 
-  	splitWord.forEach(function(splitted){
-        pushWord.push(splitted);
-    })
+}
+ageOnVenus() {
+  let venusAge = parseInt(this.ageOnEarth()/0.62);
+  return venusAge;
+}
+ageOnMars() {
+  let marsAge = parseInt(this.ageOnEarth()/1.88);
+  return marsAge;
+}
+ageOnJupiter() {
+  let jupiterAge = parseInt(this.ageOnEarth()/11.86);
+  return jupiterAge;
+}
 
-    });
+//Life expectancy on different planets
 
-    pushWord.forEach(function(letter){
+avgLifeExpectancy() {
+if (this.ageOnEarth() > this.lifeExpectancy) {
+    alert("Congratulations!!!You have crossed the average lifeExpectancy");
+}
+}
 
-      for(i=0; i < vowelArray.length; i++) {
-        if(letter == vowelArray[i]){
+lifeExpectancyOnEarth() {
+    let lifeExpOnEarth = parseInt(this.lifeExpectancy - this.ageOnEarth());
+  return lifeExpOnEarth;
+}
 
-          letters.push(letter);
-        }
-      }
-     })
-     alert(letters);
+lifeExpectancyOnMercury() {
+  let lifeExpOnMercury = parseInt(this.lifeExpOnEarth()/0.24);
+  return lifeExpOnMercury;
+}
 
+lifeExpectancyOnVenus() {
+  let lifeExpOnVenus = parseInt(this.lifeExpOnEarth()/0.62);
+  return lifeExpOnVenus;
+}
+
+lifeExpectancyOnMars() {
+  let lifeExpOnMars = parseInt(this.lifeExpOnEarth()/1.88);
+  return lifeExpOnMars;
+}
+
+lifeExpectancyOnJupiter() {
+  let lifeExpOnJupiter = parseInt(this.lifeExpOnEarth()/11.86);
+  return lifeExpOnJupiter;
+}
 
 }
