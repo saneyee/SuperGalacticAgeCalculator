@@ -1,20 +1,27 @@
-// var Haiku = require('./../js/haiku.js').haikuModule;
+import { GalacticAge } from './../js/galactic-age.js';
 
-$(function(){
+$(document).ready(function () {
 $(".formOne").submit(function(event){
   event.preventDefault();
 
-  var userInput = $("#input").val();
-  var match = /\r|\n/.exec(userInput);
-  if(match > 2){
-    alert("Not a Haiku");
-  }
-  else {
-    // var romanNumerical = new Roman();
-    // var output = romanNumerical.convertToRoman(userInput);
-    // $("#output").text(output);
-    alert("Its a Haiku");
-  };
+    let dob = new Date($("#dob").val());
+    console.log(dob);
+    let calculate = new GalacticAge(dob);
+
+    $("#output").show();
+
+    $('#ageseconds').text(calculate.ageToSeconds());
+
+    $('#earth').text(calculate.ageOnEarth());
+    $('#mercury').text(calculate.ageOnMercury());
+    $('#venus').text(calculate.ageOnVenus());
+    $('#mars').text(calculate.ageOnMars());
+    $('#jupiter').text(calculate.ageOnJupiter());
+
+    $('#mercuryexp').text(calculate.lifeExpectancyOnMercury());
+    $('#venusexp').text(calculate.lifeExpectancyOnVenus());
+    $('#marsexp').text(calculate.lifeExpectancyOnMars());
+    $('#jupiterexp').text(calculate.lifeExpectancyOnJupiter());
 
 });
 });

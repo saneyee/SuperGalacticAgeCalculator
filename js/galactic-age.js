@@ -6,7 +6,7 @@ export class GalacticAge {
 
 //ages on different planets
 ageOnEarth() {
-    const birthdate = new Date(dob);
+    const birthdate = new Date(this.dob);
     let today = new Date();
     let diff = today-birthdate;
     let age = Math.floor(diff/(1000*60*60*24*365.25));
@@ -52,22 +52,22 @@ lifeExpectancyOnEarth() {
 }
 
 lifeExpectancyOnMercury() {
-  let lifeExpOnMercury = parseInt(this.lifeExpOnEarth()/0.24);
+  let lifeExpOnMercury = parseInt(this.lifeExpectancyOnEarth()/0.24);
   return lifeExpOnMercury;
 }
 
 lifeExpectancyOnVenus() {
-  let lifeExpOnVenus = parseInt(this.lifeExpOnEarth()/0.62);
+  let lifeExpOnVenus = parseInt(this.lifeExpectancyOnEarth()/0.62);
   return lifeExpOnVenus;
 }
 
 lifeExpectancyOnMars() {
-  let lifeExpOnMars = parseInt(this.lifeExpOnEarth()/1.88);
+  let lifeExpOnMars = parseInt(this.lifeExpectancyOnEarth()/1.88);
   return lifeExpOnMars;
 }
 
 lifeExpectancyOnJupiter() {
-  let lifeExpOnJupiter = parseInt(this.lifeExpOnEarth()/11.86);
+  let lifeExpOnJupiter = parseInt(this.lifeExpectancyOnEarth()/11.86);
   return lifeExpOnJupiter;
 }
 
