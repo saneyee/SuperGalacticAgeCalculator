@@ -40,11 +40,11 @@ ageOnJupiter() {
 
 //Life expectancy on different planets
 
-avgLifeExpectancy() {
-if (this.ageOnEarth() > this.lifeExpectancy) {
-    alert("Congratulations!!!You have crossed the average lifeExpectancy");
-}
-}
+// avgLifeExpectancy() {
+// if (this.ageOnEarth() > this.lifeExpectancy) {
+//     alert("Congratulations!!!You have crossed the average lifeExpectancy");
+// }
+// }
 
 lifeExpectancyOnEarth() {
     let lifeExpOnEarth = parseInt(this.lifeExpectancy - this.ageOnEarth());
